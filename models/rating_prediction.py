@@ -1,6 +1,7 @@
 # Library imports
 from torch import nn
 import torch
+from datetime import datetime
 
 
 class rating_pred(nn.Module):
@@ -83,8 +84,10 @@ def train_model(
         avg_val_loss = val_loss_total / num_val_batches
         val_losses.append(avg_val_loss)
 
+        time = datetime.now()
+
         print(
-            f"Epoch [{epoch + 1}/{num_epochs}] - Train Loss: {avg_train_loss:.4f}, Val Loss: {avg_val_loss:.4f}"
+            f"Epoch [{epoch + 1}/{num_epochs}] - Train Loss: {avg_train_loss:.4f}, Val Loss: {avg_val_loss:.4f}, Finished at: {time}"
         )
 
     return train_losses, val_losses
