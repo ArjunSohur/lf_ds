@@ -1,5 +1,6 @@
 # Library imports
 import json
+import torch
 
 # Variables
 input_file_path = "yelp_dataset/yelp_academic_dataset_review.json"
@@ -10,6 +11,7 @@ def extract(datapoints):
     with open(input_file_path, "r") as input_file, open(
         output_file_path, "w"
     ) as output_file:
+        output_file.truncate(0)
         lines_copied = 0
         print("Loaded review dataset")
 

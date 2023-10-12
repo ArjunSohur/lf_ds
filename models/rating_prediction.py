@@ -33,6 +33,8 @@ def train_model(
 ):
     train_losses = []
     val_losses = []
+    print("------------------------------------")
+    print(f"Starting training at: {datetime.now()}")
 
     for epoch in range(num_epochs):
         model.train()
@@ -89,5 +91,8 @@ def train_model(
         print(
             f"Epoch [{epoch + 1}/{num_epochs}] - Train Loss: {avg_train_loss:.4f}, Val Loss: {avg_val_loss:.4f}, Finished at: {time}"
         )
+
+    print(f"Finished training at: {datetime.now()}")
+    print("------------------------------------")
 
     return train_losses, val_losses
