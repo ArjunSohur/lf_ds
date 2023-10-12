@@ -1,2 +1,7 @@
 .venv/
 yelp_dataset/
+models/f.pt
+f.pt
+models/__pycache__/decsum.cpython-39.pyc
+manage_dataset/__pycache__/dataset.cpython-39.pyc
+models/__pycache__/rating_prediction.cpython-39.pyc
