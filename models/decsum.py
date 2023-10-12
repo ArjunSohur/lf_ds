@@ -67,7 +67,7 @@ def train_model_ds(
 ):
     train_losses = []
     validation_losses = []
-    print("------------------------------------")
+    print("------------------------------------ STARTING TRANING FOR DS")
     print(f"Starting training at: {datetime.now()}")
 
     for epoch in range(num_epochs):
@@ -129,6 +129,6 @@ def train_model_ds(
         )
 
     print(f"Finished training at: {datetime.now()}")
-    print("------------------------------------")
+    print("------------------------------------ ENDING TRANING FOR DS")
 
     return train_losses, validation_losses

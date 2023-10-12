@@ -106,11 +106,9 @@ if __name__ == "__main__":
         scheduler=scheduler,
         num_epochs=num_epochs,
     )
-        
 
 
+    torch.save(ds.state_dict(), "{}/ds.pt".format(save_path))
 
-
-        
     
-
+ 
